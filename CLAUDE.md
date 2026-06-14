@@ -36,7 +36,11 @@ recommendations**. It serves a live dashboard at localhost:7700 and outputs
 - Run `python run.py sample-export/` to test end to end.
 
 ## Things I have learned during the build (update this as you go)
-- (e.g. "page text filenames are URL-encoded with an `original_https_` prefix - decode before
-  matching to Address")
-- (e.g. "orphans = `Unique Inlinks` == 0, NOT `Inlinks` == 0 - Inlinks counts repeated links")
-- ...
+## Things I have learned during the build
+
+- Orphan pages should use `Unique Inlinks == 0`, not `Inlinks == 0`.
+- Suggested anchors can be generated from `Title 1`, `H1-1`, and URL slugs when model output is unavailable.
+- CMS archive URLs (`/author/`, `/tag/`, `/page/`) create noisy recommendations and should be filtered.
+- Under-linked pages should be prioritized in recommendation ranking.
+- Dashboard metrics should fall back to deterministic analysis data when model data is not available.
+

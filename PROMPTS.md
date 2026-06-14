@@ -15,17 +15,29 @@ Format per entry:
 - **Revised?** did you have to change it, and why
 
 ---
-
-## Example (replace with your own)
-
-- **Prompt:** "Extend linkintel/analyzer.py over_optimized_anchors: flag a destination where
-  one non-generic anchor is >= 60% of all internal anchors pointing at it AND count >= 10.
-  Run python linkintel/analyzer.py and show the counts."
-- **For:** completing the over-optimized exact-match anchor rule
-- **Revised?** Yes - first version flagged tiny destinations; added the count >= 10 floor.
-
----
-
 ## My prompts
-1. ...
-2. ...
+
+* **Prompt:** Review analyzer.py and identify the highest-impact missing feature.
+
+* **For:** Finding the most valuable improvement with minimal code changes.
+
+* **Revised?** No.
+
+* **Prompt:** Implement deterministic suggested_anchor generation using page metadata.
+
+* **For:** Replacing null recommendation anchors.
+
+* **Revised?** Yes, title cleanup was added.
+
+* **Prompt:** Implement cluster name generation using representative keywords.
+
+* **For:** Replacing null cluster names.
+
+* **Revised?** No.
+
+* **Prompt:** Improve recommendation quality by prioritizing under-linked pages and filtering weak candidates.
+
+* **For:** Improving recommendation relevance.
+
+* **Revised?** Yes, a conservative threshold was used.
+

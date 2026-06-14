@@ -98,3 +98,14 @@ the build brief for the full checklist and deadline.
 ## Note
 The dashboard renders the operator's own crawl data on localhost; it is a local cockpit, not a
 hardened public server. The shareable artifact is the exported `report.html`.
+
+## Implementation Notes
+
+Implemented improvements:
+
+* Deterministic suggested anchor generation using page metadata.
+* Fallback cluster naming using representative keywords.
+* Recommendation prioritization for under-linked pages.
+* Filtering of archive/navigation URLs from recommendations.
+* Minimum relatedness threshold for recommendation quality.
+* Dashboard entity count fallback using deterministic keyword extraction.
